@@ -1,2 +1,1 @@
-# CTPFileTrader
-CTP File Trader
+#XYCTP_FTrader13

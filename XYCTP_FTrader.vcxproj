@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{99C503C5-6BC8-3C5A-DBCD-316C3322B419}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Platform)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Platform)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)tmp\$(ProjectName)\$(Platform)$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)ctpzq_api;$(SolutionDir)ctpqh_api;$(SolutionDir)src;$(SolutionDir)lib;$(SolutionDir)include;$(SolutionDir)resources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>$(SolutionDir)ctpzq_api;$(SolutionDir)ctpqh_api;$(SolutionDir)src;$(SolutionDir)lib;$(SolutionDir)include;$(SolutionDir)resources;%(AdditionalIncludeDirectories)</AdditionalUsingDirectories>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Platform)$(Configuration)\;$(SolutionDir)lib\$(Platform)$(Configuration)\;$(SolutionDir)ctpzq_api\$(Platform)$(Configuration)\;$(SolutionDir)ctpqh_api\$(Platform)$(Configuration)\;$(SolutionDir)ctpzq_api\;$(SolutionDir)ctpqh_api\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>thostmduserapiSSE.lib;thosttraderapiSSE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)ctpzq_api;$(SolutionDir)ctpqh_api;$(SolutionDir)src;$(SolutionDir)lib;$(SolutionDir)include;$(SolutionDir)resources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>$(SolutionDir)ctpzq_api;$(SolutionDir)ctpqh_api;$(SolutionDir)src;$(SolutionDir)lib;$(SolutionDir)include;$(SolutionDir)resources;%(AdditionalIncludeDirectories)</AdditionalUsingDirectories>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Platform)$(Configuration)\;$(SolutionDir)lib\$(Platform)$(Configuration)\;$(SolutionDir)ctpzq_api\$(Platform)$(Configuration)\;$(SolutionDir)ctpqh_api\$(Platform)$(Configuration)\;$(SolutionDir)ctpzq_api\;$(SolutionDir)ctpqh_api\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>thostmduserapiSSE.lib;thosttraderapiSSE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\config.cpp" />
+    <ClCompile Include="src\CTPSTOCK.cpp" />
+    <ClCompile Include="src\FileSystemWatcher.cpp" />
+    <ClCompile Include="src\log.cpp" />
+    <ClCompile Include="src\logInfo.cpp" />
+    <ClCompile Include="src\PathHelper.cpp" />
+    <ClCompile Include="src\StdAfx.cpp" />
+    <ClCompile Include="src\ZQMD.cpp" />
+    <ClCompile Include="src\ZQTD.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ctpzq_api\shfe_stock_ns.h" />
+    <ClInclude Include="ctpzq_api\ThostFtdcMdApiSSE.h" />
+    <ClInclude Include="ctpzq_api\ThostFtdcTraderApiSSE.h" />
+    <ClInclude Include="ctpzq_api\ThostFtdcUserApiDataTypeSSE.h" />
+    <ClInclude Include="ctpzq_api\ThostFtdcUserApiStructSSE.h" />
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\FileSystemWatcher.h" />
+    <ClInclude Include="src\log.h" />
+    <ClInclude Include="src\logInfo.h" />
+    <ClInclude Include="src\PathHelper.h" />
+    <ClInclude Include="src\StdAfx.h" />
+    <ClInclude Include="src\ZQMD.h" />
+    <ClInclude Include="src\ZQTD.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
