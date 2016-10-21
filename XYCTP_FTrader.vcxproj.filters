@@ -15,16 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\CTPSTOCK.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\StdAfx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ZQMD.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ZQTD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\config.cpp">
@@ -42,30 +33,21 @@
     <ClCompile Include="src\logInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\FTMD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FTTD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CTPFUTURE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ctpzq_api\shfe_stock_ns.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ctpzq_api\ThostFtdcMdApiSSE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ctpzq_api\ThostFtdcTraderApiSSE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ctpzq_api\ThostFtdcUserApiDataTypeSSE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ctpzq_api\ThostFtdcUserApiStructSSE.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\StdAfx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ZQMD.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ZQTD.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\config.h">
@@ -81,6 +63,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\logInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FTMD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FTTD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ctpqh_api\ThostFtdcMdApi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ctpqh_api\ThostFtdcTraderApi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ctpqh_api\ThostFtdcUserApiDataType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ctpqh_api\ThostFtdcUserApiStruct.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

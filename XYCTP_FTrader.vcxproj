@@ -69,7 +69,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Platform)$(Configuration)\;$(SolutionDir)lib\$(Platform)$(Configuration)\;$(SolutionDir)ctpzq_api\$(Platform)$(Configuration)\;$(SolutionDir)ctpqh_api\$(Platform)$(Configuration)\;$(SolutionDir)ctpzq_api\;$(SolutionDir)ctpqh_api\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>thostmduserapiSSE.lib;thosttraderapiSSE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>thostmduserapi.lib;thosttraderapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -91,34 +91,34 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(SolutionDir)bin\$(Platform)$(Configuration)\;$(SolutionDir)lib\$(Platform)$(Configuration)\;$(SolutionDir)ctpzq_api\$(Platform)$(Configuration)\;$(SolutionDir)ctpqh_api\$(Platform)$(Configuration)\;$(SolutionDir)ctpzq_api\;$(SolutionDir)ctpqh_api\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>thostmduserapiSSE.lib;thosttraderapiSSE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>thostmduserapi.lib;thosttraderapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\config.cpp" />
-    <ClCompile Include="src\CTPSTOCK.cpp" />
+    <ClCompile Include="src\CTPFUTURE.cpp" />
     <ClCompile Include="src\FileSystemWatcher.cpp" />
+    <ClCompile Include="src\FTMD.cpp" />
+    <ClCompile Include="src\FTTD.cpp" />
     <ClCompile Include="src\log.cpp" />
     <ClCompile Include="src\logInfo.cpp" />
     <ClCompile Include="src\PathHelper.cpp" />
     <ClCompile Include="src\StdAfx.cpp" />
-    <ClCompile Include="src\ZQMD.cpp" />
-    <ClCompile Include="src\ZQTD.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ctpqh_api\ThostFtdcMdApi.h" />
+    <ClInclude Include="ctpqh_api\ThostFtdcTraderApi.h" />
+    <ClInclude Include="ctpqh_api\ThostFtdcUserApiDataType.h" />
+    <ClInclude Include="ctpqh_api\ThostFtdcUserApiStruct.h" />
     <ClInclude Include="ctpzq_api\shfe_stock_ns.h" />
-    <ClInclude Include="ctpzq_api\ThostFtdcMdApiSSE.h" />
-    <ClInclude Include="ctpzq_api\ThostFtdcTraderApiSSE.h" />
-    <ClInclude Include="ctpzq_api\ThostFtdcUserApiDataTypeSSE.h" />
-    <ClInclude Include="ctpzq_api\ThostFtdcUserApiStructSSE.h" />
     <ClInclude Include="src\config.h" />
     <ClInclude Include="src\FileSystemWatcher.h" />
+    <ClInclude Include="src\FTMD.h" />
+    <ClInclude Include="src\FTTD.h" />
     <ClInclude Include="src\log.h" />
     <ClInclude Include="src\logInfo.h" />
     <ClInclude Include="src\PathHelper.h" />
     <ClInclude Include="src\StdAfx.h" />
-    <ClInclude Include="src\ZQMD.h" />
-    <ClInclude Include="src\ZQTD.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
