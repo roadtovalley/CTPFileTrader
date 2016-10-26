@@ -95,5 +95,20 @@ void CFTMD::OnRtnDepthMarketData(CThostFtdcDepthMarketDataField *pDepthMarketDat
 	pMD->BidPrice1 = (pMD->BidPrice1 > 10000000.0) ? pMD->LastPrice : pMD->BidPrice1;             ///申买价一
 	pMD->AskPrice1 = (pMD->AskPrice1 > 10000000.0) ? pMD->LastPrice : pMD->AskPrice1;             ///申卖价一
 	pMD->AveragePrice = (pMD->AveragePrice > 10000000.0) ? pMD->LastPrice : pMD->AveragePrice;    ///当日均价
-
+	/*
+	if (pDepthMarketData->LastPrice == 0)
+	{
+		g_pLog->printLog("MarketData:%s,%s,%s,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%d\n", pDepthMarketData->InstrumentID,
+			pDepthMarketData->UpdateTime,
+			pDepthMarketData->TradingDay,
+			pDepthMarketData->PreClosePrice,
+			pDepthMarketData->OpenPrice,
+			pDepthMarketData->LastPrice,
+			pDepthMarketData->UpperLimitPrice,
+			pDepthMarketData->LowerLimitPrice,
+			pDepthMarketData->AskPrice1,
+			pDepthMarketData->BidPrice1,
+			pDepthMarketData->Volume);
+	}
+	*/
 }
